@@ -12,7 +12,7 @@ class ProductsScreen extends StatelessWidget {
           title: const Text('Route'),
         ),
         body: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 18.0),
+          padding: EdgeInsets.symmetric(horizontal: 12.0),
           child: Column(
             children: [
               SearchAndShoppingIconBar(),

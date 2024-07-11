@@ -14,29 +14,70 @@ class CustomProductCard extends StatelessWidget {
         border: Border.all(
             color: AppColorHelper.iconsColor.withOpacity(0.4), width: 1.4),
       ),
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
+          const Expanded(
             child: CustomImageViewer(),
           ),
           Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Product Name',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTextStyleHelper.font18Reg,
-                ),
-                Text(
-                  'Product Price',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTextStyleHelper.font18Reg,
-                ),
-              ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 6.0,vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    'Product Name',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTextStyleHelper.font18Reg,
+                  ),
+                  const Text(
+                    'Product Price',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: AppTextStyleHelper.font18Reg,
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        'EGP1800',
+                        style: AppTextStyleHelper.font18Reg,
+                      ),
+                      const Spacer(),
+                      Text(
+                        '2000EGP',
+                        style: AppTextStyleHelper.font18RegWithIconColor.copyWith(
+                          decoration: TextDecoration.lineThrough,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      const Text('Reviews(4.2)', style: AppTextStyleHelper.font18Reg),
+                      const Icon(
+                        Icons.star,
+                        color: AppColorHelper.startIconColor,
+                      ),
+                      const Spacer(),
+                      Container(
+                        padding: const EdgeInsets.all(2),
+                        decoration: const BoxDecoration(
+                          color: AppColorHelper.plusIconColor,
+                          shape: BoxShape.circle,
+                        ),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                          size: 24,
+                          weight: 20,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ],
@@ -44,4 +85,3 @@ class CustomProductCard extends StatelessWidget {
     );
   }
 }
-

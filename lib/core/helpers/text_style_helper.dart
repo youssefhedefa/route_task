@@ -7,4 +7,9 @@ abstract class AppTextStyleHelper{
     fontWeight: FontWeight.w400,
     color: AppColorHelper.fontColor,
   );
+  static const TextStyle font18RegWithIconColor = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    color: AppColorHelper.iconsColor,
+  );
 }

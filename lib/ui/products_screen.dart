@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:route_task/ui/widgets/search_and_shopping_icon_bar.dart';
 
 class ProductsScreen extends StatelessWidget {
   const ProductsScreen({super.key});
@@ -9,11 +10,11 @@ class ProductsScreen extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Route'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+        body: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 18.0),
           child: Column(
             children: [
-              const SearchAndShoppingIconBar(),
+              SearchAndShoppingIconBar(),
             ],
           ),
         ),

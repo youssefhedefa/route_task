@@ -3,7 +3,9 @@ import 'package:route_task/core/helpers/color_helper.dart';
 
 
 class CustomImageViewer extends StatelessWidget {
-  const CustomImageViewer({super.key});
+  const CustomImageViewer({super.key, required this.image});
+
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +14,7 @@ class CustomImageViewer extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           child: Image.network(
-            'https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png',
+            image,
             fit: BoxFit.fill,
           ),
         ),

@@ -20,8 +20,7 @@ class GetProductsRepo {
               image: e.images?.first ?? "N/A",
               price: e.price.toString(),
               priceBeforeDiscount: (e.price! +
-                      (e.price! * e.discountPercentage!.toDouble() / 100))
-                  .toString(),
+                      (e.price! * e.discountPercentage!.toDouble() / 100)).toStringAsFixed(2),
               rating: e.rating.toString(),
             ),
           )

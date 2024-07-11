@@ -9,7 +9,10 @@ class ProductsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Route'),
+          leading: Image.asset(
+            'assets/images/route_logo.png',
+          ),
+          surfaceTintColor: Colors.white,
         ),
         body: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 12.0),

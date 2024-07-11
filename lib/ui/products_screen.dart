@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:route_task/ui/widgets/custom_grid_view.dart';
 import 'package:route_task/ui/widgets/search_and_shopping_icon_bar.dart';
 
 class ProductsScreen extends StatelessWidget {
@@ -15,6 +16,10 @@ class ProductsScreen extends StatelessWidget {
           child: Column(
             children: [
               SearchAndShoppingIconBar(),
+              SizedBox(
+                height: 18,
+              ),
+              Expanded(child: CustomGridView()),
             ],
           ),
         ),

@@ -10,6 +10,6 @@ abstract class ApiServices{
   factory ApiServices(Dio dio, {String baseUrl}) = _ApiServices;
 
   @GET(ApiConst.products)
-  Future<List<ProductModel>> getProducts();
+  Future<ProductModel> getProducts();
 
 }

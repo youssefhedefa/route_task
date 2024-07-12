@@ -1,4 +1,4 @@
-import 'package:route_task/domain/product_entity.dart';
+import 'package:route_task/domain/entity/product_entity.dart';
 
 abstract class ViewProductStates {}
 

@@ -1,12 +1,14 @@
 import 'package:dartz/dartz.dart';
 import 'package:route_task/core/networking/api_manager/api_services.dart';
-import 'package:route_task/domain/product_entity.dart';
+import 'package:route_task/domain/entity/product_entity.dart';
+import 'package:route_task/domain/repo_contract/product_repo.dart';
 
-class GetProductsRepo {
+class ProductsRepoImpl extends ProductRepo {
   final ApiServices apiServices;
 
-  GetProductsRepo({required this.apiServices});
+  ProductsRepoImpl({required this.apiServices});
 
+  @override
   Future<Either<List<ProductEntity>, String>> getProducts() async {
     try {
       final productsModel = await apiServices.getProducts();

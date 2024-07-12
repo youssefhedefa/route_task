@@ -13,6 +13,6 @@ Future<void> setUp() async {
   getIt.registerLazySingleton<ApiServices>(() => ApiServices(dio));
   getIt.registerLazySingleton<ProductsRepoImpl>(() => ProductsRepoImpl(apiServices: getIt()));
   getIt.registerLazySingleton<GetProductsUseCase>(() => GetProductsUseCase(productRepository: getIt()));
-  getIt.registerLazySingleton<ViewProductCubit>(() => ViewProductCubit(productsRepo: getIt(), getProductsUseCase: getIt()));
+  getIt.registerLazySingleton<ViewProductCubit>(() => ViewProductCubit(getProductsUseCase: getIt()));
 
 }

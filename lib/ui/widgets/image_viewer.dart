@@ -15,7 +15,7 @@ class CustomImageViewer extends StatelessWidget {
           width: double.infinity,
           child: Image.network(
             image,
-            fit: BoxFit.fill,
+            fit: BoxFit.contain,
           ),
         ),
         Positioned(
